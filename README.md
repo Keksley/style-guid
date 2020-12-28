@@ -291,18 +291,6 @@
 
 16) Никогда не используйте `eval()`, т.к. это открывает множество уязвимостей. eslint: [`no-eval`](https://eslint.org/docs/rules/no-eval)
 
-- Не используйте в строках необязательные экранирующие символы. eslint: [`no-useless-escape`](https://eslint.org/docs/rules/no-useless-escape)
-
-    > Почему? Обратные слеши ухудшают читабельность, поэтому они должны быть только при необходимости.
-
-    ```javascript
-    // плохо
-    const foo = '\'this\' \i\s \"quoted\"';
-
-    // хорошо
-    const foo = '\'this\' is "quoted"';
-    const foo = `my name is '${name}'`;
-    ```
 17) Используйте синтаксис записи аргументов по умолчанию, а не изменяйте аргументы функции.
 
     ```javascript
@@ -1357,4 +1345,16 @@
     // хорошо
     Number.isFinite('2e3'); // false
     Number.isFinite(parseInt('2e3', 10)); // true
+    ```
+59) Не используйте в строках необязательные экранирующие символы. eslint: [`no-useless-escape`](https://eslint.org/docs/rules/no-useless-escape)
+
+    > Почему? Обратные слеши ухудшают читабельность, поэтому они должны быть только при необходимости.
+
+    ```javascript
+    // плохо
+    const foo = '\'this\' \i\s \"quoted\"';
+
+    // хорошо
+    const foo = '\'this\' is "quoted"';
+    const foo = `my name is '${name}'`;
     ```
