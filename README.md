@@ -344,7 +344,7 @@
     const y = function a() {};
     ```
 
-- Никогда не изменяйте параметры. eslint: [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign.html)
+19) Никогда не изменяйте параметры. eslint: [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign.html)
 
     > Почему? Манипуляция объектами, приходящими в качестве параметров, может вызывать нежелательные побочные эффекты в вызывающей функции.
 
@@ -360,7 +360,7 @@
     }
     ```
 
-- Никогда не переназначайте параметры. eslint: [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign.html)
+20) Никогда не переназначайте параметры. eslint: [`no-param-reassign`](https://eslint.org/docs/rules/no-param-reassign.html)
 
     > Почему? Переназначенные параметры могут привести к неожиданному поведению, особенно при обращении к `arguments`. Это также может вызывать проблемы оптимизации, особенно в V8.
 
@@ -387,7 +387,7 @@
     }
     ```
 
-- Функции с многострочным определением или запуском должны содержать такие же отступы, как и другие многострочные списки в этом списке: с каждым элементом на отдельной строке, с запятой в конце элемента. eslint: [`function-paren-newline`](https://eslint.org/docs/rules/function-paren-newline)
+21) Функции с многострочным определением или запуском должны содержать такие же отступы, как и другие многострочные списки в этом списке: с каждым элементом на отдельной строке, с запятой в конце элемента. eslint: [`function-paren-newline`](https://eslint.org/docs/rules/function-paren-newline)
 
     ```javascript
     // плохо
@@ -419,7 +419,7 @@
     );
     ```
 
-- Когда вам необходимо использовать анонимную функцию (например, при передаче встроенной функции обратного вызова), используйте стрелочную функцию. eslint: [`prefer-arrow-callback`](https://eslint.org/docs/rules/prefer-arrow-callback.html), [`arrow-spacing`](https://eslint.org/docs/rules/arrow-spacing.html)
+22) Когда вам необходимо использовать анонимную функцию (например, при передаче встроенной функции обратного вызова), используйте стрелочную функцию. eslint: [`prefer-arrow-callback`](https://eslint.org/docs/rules/prefer-arrow-callback.html), [`arrow-spacing`](https://eslint.org/docs/rules/arrow-spacing.html)
 
     > Почему? Таким образом создаётся функция, которая выполняется в контексте `this`, который мы обычно хотим, а также это более короткий синтаксис.
 
@@ -439,7 +439,7 @@
     });
     ```
 
-- Если тело функции состоит из одного оператора, возвращающего [выражение](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Выражения) без побочных эффектов, то опустите фигурные скобки и используйте неявное возвращение. В противном случае, сохраните фигурные скобки и используйте оператор `return`. eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens.html), [`arrow-body-style`](https://eslint.org/docs/rules/arrow-body-style.html)
+23) Если тело функции состоит из одного оператора, возвращающего [выражение](https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Expressions_and_Operators#Выражения) без побочных эффектов, то опустите фигурные скобки и используйте неявное возвращение. В противном случае, сохраните фигурные скобки и используйте оператор `return`. eslint: [`arrow-parens`](https://eslint.org/docs/rules/arrow-parens.html), [`arrow-body-style`](https://eslint.org/docs/rules/arrow-body-style.html)
 
     > Почему? Синтаксический сахар. Когда несколько функций соединены вместе, то это лучше читается.
 
@@ -484,7 +484,7 @@
     ```
 
 
- - Избегайте схожести стрелочной функции (`=>`) с операторами сравнения (`<=`, `>=`). eslint: [`no-confusing-arrow`](https://eslint.org/docs/rules/no-confusing-arrow)
+ 24) Избегайте схожести стрелочной функции (`=>`) с операторами сравнения (`<=`, `>=`). eslint: [`no-confusing-arrow`](https://eslint.org/docs/rules/no-confusing-arrow)
 
     ```javascript
     // плохо
@@ -503,7 +503,7 @@
     };
     ```
 
- - Зафиксируйте расположение тела стрелочной функции с неявным возвратом. eslint: [`implicit-arrow-linebreak`](https://eslint.org/docs/rules/implicit-arrow-linebreak)
+ 25) Зафиксируйте расположение тела стрелочной функции с неявным возвратом. eslint: [`implicit-arrow-linebreak`](https://eslint.org/docs/rules/implicit-arrow-linebreak)
 
     ```javascript
     // плохо
@@ -519,7 +519,7 @@
        bar
     )
     ```
-- Избегайте дублирующих членов класса. eslint: [`no-dupe-class-members`](https://eslint.org/docs/rules/no-dupe-class-members)
+26) Избегайте дублирующих членов класса. eslint: [`no-dupe-class-members`](https://eslint.org/docs/rules/no-dupe-class-members)
 
     > Почему? Если объявление члена класса повторяется, без предупреждения будет использовано последнее. Наличие дубликатов скорее всего приведёт к ошибке.
 
@@ -541,7 +541,7 @@
     }
     ```
 
-- В модулях с единственным экспортом предпочтительнее использовать экспорт по умолчанию, а не экспорт по имени.
+27) В модулях с единственным экспортом предпочтительнее использовать экспорт по умолчанию, а не экспорт по имени.
  eslint: [`import/prefer-default-export`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
     > Почему? Для того чтобы поощрять создание множества файлов, которые бы экспортировали одну сущность, т.к. это лучше для читабельности и поддержки кода.
 
@@ -553,7 +553,7 @@
     export default function foo() {}
     ```
 
-- Не используйте итераторы. Применяйте функции высшего порядка вместо таких циклов как `for-in` или `for-of`. eslint: [`no-iterator`](https://eslint.org/docs/rules/no-iterator.html) [`no-restricted-syntax`](https://eslint.org/docs/rules/no-restricted-syntax)
+28) Не используйте итераторы. Применяйте функции высшего порядка вместо таких циклов как `for-in` или `for-of`. eslint: [`no-iterator`](https://eslint.org/docs/rules/no-iterator.html) [`no-restricted-syntax`](https://eslint.org/docs/rules/no-restricted-syntax)
 
     > Почему? Это обеспечивает соблюдение нашего правила о неизменности переменных. Работать с чистыми функциями, которые возвращают значение, проще, чем с функциями с побочными эффектами.
 
@@ -595,7 +595,7 @@
     // отлично (продолжайте в том же духе)
     const increasedByOne = numbers.map((num) => num + 1);
     ```
-- В первую очередь группируйте `const`, а затем `let`.
+29) В первую очередь группируйте `const`, а затем `let`.
 
     > Почему? Это полезно, когда в будущем вам понадобится создать переменную, зависимую от предыдущих.
 
@@ -619,7 +619,7 @@
     let i;
     let length;
     ```
-- Создавайте переменные там, где они вам необходимы, но помещайте их в подходящее место.
+30) Создавайте переменные там, где они вам необходимы, но помещайте их в подходящее место.
 
     > Почему? `let` и `const` имеют блочную область видимости, а не функциональную.
 
@@ -656,7 +656,7 @@
       return name;
     }
     ```
-- Избегайте использования унарных инкрементов и декрементов (`++`, `--`). eslint [`no-plusplus`](https://eslint.org/docs/rules/no-plusplus)
+31) Избегайте использования унарных инкрементов и декрементов (`++`, `--`). eslint [`no-plusplus`](https://eslint.org/docs/rules/no-plusplus)
 
     > Почему? Согласно документации eslint, унарные инкремент и декремент автоматически вставляют точку с запятой, что может стать причиной трудноуловимых ошибок при инкрементировании и декрементировании значений. Также нагляднее изменять ваши значения таким образом `num += 1` вместо `num++` или `num ++`. Запрет на унарные инкремент и декремент ограждает вас от непреднамеренных преждевременных инкрементаций/декрементаций значений, которые могут привести к непредсказуемому поведению вашей программы.
 
@@ -689,9 +689,9 @@
     const truthyCount = array.filter(Boolean).length;
     ```
 
-- Используйте `===` и `!==` вместо `==` и `!=`. eslint: [`eqeqeq`](https://eslint.org/docs/rules/eqeqeq.html)
+32) Используйте `===` и `!==` вместо `==` и `!=`. eslint: [`eqeqeq`](https://eslint.org/docs/rules/eqeqeq.html)
 
-- Используйте сокращения для булевских типов, а для строк и чисел применяйте явное сравнение.
+33) Используйте сокращения для булевских типов, а для строк и чисел применяйте явное сравнение.
 
     ```javascript
     // плохо
@@ -725,7 +725,7 @@
     }
     ```
 
-- При смешивании операторов, помещайте их в круглые скобки. Единственным исключением являются стандартные арифметические операторы: `+`, `-` и `**`, так как их приоритет широко известен. Мы рекомендуем заключить `/` и `*` в круглые скобки, поскольку их приоритет может быть неоднозначным, когда они смешиваются. eslint: [`no-mixed-operators`](https://eslint.org/docs/rules/no-mixed-operators.html)
+34) При смешивании операторов, помещайте их в круглые скобки. Единственным исключением являются стандартные арифметические операторы: `+`, `-` и `**`, так как их приоритет широко известен. Мы рекомендуем заключить `/` и `*` в круглые скобки, поскольку их приоритет может быть неоднозначным, когда они смешиваются. eslint: [`no-mixed-operators`](https://eslint.org/docs/rules/no-mixed-operators.html)
 
     > Почему? Это улучшает читаемость и уточняет намерения разработчика.
 
@@ -761,7 +761,7 @@
     ```
 
 
-- Если блоки кода в условии `if` и `else` занимают несколько строк, расположите оператор `else` на той же строчке, где находится закрывающая фигурная скобка блока `if`. eslint: [`brace-style`](https://eslint.org/docs/rules/brace-style.html)
+35) Если блоки кода в условии `if` и `else` занимают несколько строк, расположите оператор `else` на той же строчке, где находится закрывающая фигурная скобка блока `if`. eslint: [`brace-style`](https://eslint.org/docs/rules/brace-style.html)
 
     ```javascript
     // плохо
@@ -781,7 +781,7 @@
       thing3();
     }
     ```
-- Если в блоке `if` всегда выполняется оператор `return`, последующий блок `else` не нужен. `return`  внутри блока `else if`, следующем за блоком `if`, который содержит `return`, может быть разделён на несколько блоков `if`. eslint: [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
+36) Если в блоке `if` всегда выполняется оператор `return`, последующий блок `else` не нужен. `return`  внутри блока `else if`, следующем за блоком `if`, который содержит `return`, может быть разделён на несколько блоков `if`. eslint: [`no-else-return`](https://eslint.org/docs/rules/no-else-return)
 
     ```javascript
     // плохо
@@ -845,7 +845,7 @@
     }
     ```
 
-- Если ваш управляющий оператор (`if`, `while` и т.д.) слишком длинный или превышает максимальную длину строки, то каждое (сгруппированное) условие можно поместить на новую строку. Логический оператор должен располагаться в начале строки.
+37) Если ваш управляющий оператор (`if`, `while` и т.д.) слишком длинный или превышает максимальную длину строки, то каждое (сгруппированное) условие можно поместить на новую строку. Логический оператор должен располагаться в начале строки.
 
     > Почему? Наличие операторов в начале строки приводит к выравниванию операторов и напоминает цепочку методов. Это также улучшает читаемость, упрощая визуальное отслеживание сложной логики.
 
@@ -898,7 +898,7 @@
     }
     ```
 
-- Ставьте 1 пробел перед открывающей фигурной скобкой у блока. eslint: [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks.html)
+38) Ставьте 1 пробел перед открывающей фигурной скобкой у блока. eslint: [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks.html)
 
     ```javascript
     // плохо
@@ -924,7 +924,7 @@
     });
     ```
 
-- Ставьте 1 пробел перед открывающей круглой скобкой в операторах управления (`if`, `while` и т.п.). Не оставляйте пробелов между списком аргументов и названием в объявлениях и вызовах функций. eslint: [`keyword-spacing`](https://eslint.org/docs/rules/keyword-spacing.html)
+39) Ставьте 1 пробел перед открывающей круглой скобкой в операторах управления (`if`, `while` и т.п.). Не оставляйте пробелов между списком аргументов и названием в объявлениях и вызовах функций. eslint: [`keyword-spacing`](https://eslint.org/docs/rules/keyword-spacing.html)
 
     ```javascript
     // плохо
@@ -948,7 +948,7 @@
     }
     ```
 
-- Разделяйте операторы пробелами. eslint: [`space-infix-ops`](https://eslint.org/docs/rules/space-infix-ops.html)
+40) Разделяйте операторы пробелами. eslint: [`space-infix-ops`](https://eslint.org/docs/rules/space-infix-ops.html)
 
     ```javascript
     // плохо
@@ -958,7 +958,7 @@
     const x = y + 5;
     ```
 
-- Используйте переносы строк и отступы, когда делаете длинные цепочки методов (больше 2 методов). Ставьте точку в начале строки, чтобы дать понять, что это не новая инструкция, а продолжение цепочки. eslint: [`newline-per-chained-call`](https://eslint.org/docs/rules/newline-per-chained-call) [`no-whitespace-before-property`](https://eslint.org/docs/rules/no-whitespace-before-property)
+41) Используйте переносы строк и отступы, когда делаете длинные цепочки методов (больше 2 методов). Ставьте точку в начале строки, чтобы дать понять, что это не новая инструкция, а продолжение цепочки. eslint: [`newline-per-chained-call`](https://eslint.org/docs/rules/newline-per-chained-call) [`no-whitespace-before-property`](https://eslint.org/docs/rules/no-whitespace-before-property)
 
     ```javascript
     // плохо
@@ -999,7 +999,7 @@
     // хорошо
     const leds = stage.selectAll('.led').data(data);
     ```
-- Оставляйте пустую строку между блоком кода и следующей инструкцией.
+42) Оставляйте пустую строку между блоком кода и следующей инструкцией.
 
     ```javascript
     // плохо
@@ -1057,7 +1057,7 @@
     ```
 
 
-- Не добавляйте пробелы между квадратными скобками и их содержимым. eslint: [`array-bracket-spacing`](https://eslint.org/docs/rules/array-bracket-spacing.html)
+43) Не добавляйте пробелы между квадратными скобками и их содержимым. eslint: [`array-bracket-spacing`](https://eslint.org/docs/rules/array-bracket-spacing.html)
 
     ```javascript
     // плохо
@@ -1069,7 +1069,7 @@
     console.log(foo[0]);
     ```
 
-- Добавляйте пробелы между фигурными скобками и их содержимым. eslint: [`object-curly-spacing`](https://eslint.org/docs/rules/object-curly-spacing.html)
+44) Добавляйте пробелы между фигурными скобками и их содержимым. eslint: [`object-curly-spacing`](https://eslint.org/docs/rules/object-curly-spacing.html)
 
     ```javascript
     // плохо
@@ -1079,7 +1079,7 @@
     const foo = { clark: 'kent' };
     ```
 
-- Старайтесь не допускать, чтобы строки были длиннее 100 символов (включая пробелы). Замечание: длинные строки с текстом освобождаются от этого правила и не должны разбиваться на несколько строк. eslint: [`max-len`](https://eslint.org/docs/rules/max-len.html)
+45) Старайтесь не допускать, чтобы строки были длиннее 100 символов (включая пробелы). Замечание: длинные строки с текстом освобождаются от этого правила и не должны разбиваться на несколько строк. eslint: [`max-len`](https://eslint.org/docs/rules/max-len.html)
 
     > Почему? Это обеспечивает удобство чтения и поддержки кода.
 
@@ -1109,7 +1109,7 @@
     ```
 
 
-- Избегайте пробелов между функциями и их вызовами. eslint: [`func-call-spacing`](https://eslint.org/docs/rules/func-call-spacing)
+46) Избегайте пробелов между функциями и их вызовами. eslint: [`func-call-spacing`](https://eslint.org/docs/rules/func-call-spacing)
 
     ```javascript
     // плохо
@@ -1122,7 +1122,7 @@
     func();
     ```
 
-- Обеспечьте согласованное расстояние между ключами и значениями в свойствах литералов объекта. eslint: [`key-spacing`](https://eslint.org/docs/rules/key-spacing)
+47) Обеспечьте согласованное расстояние между ключами и значениями в свойствах литералов объекта. eslint: [`key-spacing`](https://eslint.org/docs/rules/key-spacing)
 
     ```javascript
     // плохо
@@ -1133,9 +1133,9 @@
     var obj = { "foo": 42 };
     ```
 
-- Избегайте пробелов в конце строки. eslint: [`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)
+48) Избегайте пробелов в конце строки. eslint: [`no-trailing-spaces`](https://eslint.org/docs/rules/no-trailing-spaces)
 
-- Добавляйте точку с запятой в конце инструкций. eslint: [`semi`](https://eslint.org/docs/rules/semi.html)
+49) Добавляйте точку с запятой в конце инструкций. eslint: [`semi`](https://eslint.org/docs/rules/semi.html)
 
     > Почему? Когда JavaScript встречает перенос строки без точки с запятой, он использует правило под названием [Автоматическая Вставка Точки с запятой (Automatic Semicolon Insertion)](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion), чтобы определить, стоит ли считать этот перенос строки как конец выражения и (как следует из названия) поместить точку с запятой в вашем коде до переноса строки. Однако, ASI содержит несколько странных форм поведения, и ваш код может быть сломан, если JavaScript неверно истолкует ваш перенос строки. Эти правила станут сложнее, когда новые возможности станут частью JavaScript. Явное завершение ваших выражений и настройка вашего линтера для улавливания пропущенных точек с запятыми помогут вам предотвратить возникновение проблем.
 
@@ -1181,7 +1181,7 @@
     [Читать подробнее](https://stackoverflow.com/questions/7365172/semicolon-before-self-invoking-function/7365214#7365214).
 
 
-- Избегайте названий из одной буквы. Имя должно быть наглядным. eslint: [`id-length`](https://eslint.org/docs/rules/id-length)
+50) Избегайте названий из одной буквы. Имя должно быть наглядным. eslint: [`id-length`](https://eslint.org/docs/rules/id-length)
 
     ```javascript
     // плохо
@@ -1195,7 +1195,7 @@
     }
     ```
 
-- Используйте `camelCase` для именования объектов, функций и экземпляров. eslint: [`camelcase`](https://eslint.org/docs/rules/camelcase.html)
+51) Используйте `camelCase` для именования объектов, функций и экземпляров. eslint: [`camelcase`](https://eslint.org/docs/rules/camelcase.html)
 
     ```javascript
     // плохо
@@ -1208,7 +1208,7 @@
     function thisIsMyFunction() {}
     ```
 
-- Используйте `PascalCase` только для именования конструкторов и классов. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap.html)
+52) Используйте `PascalCase` только для именования конструкторов и классов. eslint: [`new-cap`](https://eslint.org/docs/rules/new-cap.html)
 
     ```javascript
     // плохо
@@ -1232,7 +1232,7 @@
     });
     ```
 
-- Не используйте `_` в начале или в конце названий. eslint: [`no-underscore-dangle`](https://eslint.org/docs/rules/no-underscore-dangle.html)
+53) Не используйте `_` в начале или в конце названий. eslint: [`no-underscore-dangle`](https://eslint.org/docs/rules/no-underscore-dangle.html)
 
     > Почему? JavaScript не имеет концепции приватности свойств или методов. Хотя подчёркивание в начале имени является распространённым соглашением, которое показывает «приватность», фактически эти свойства являются такими же доступными, как и часть вашего публичного API. Это соглашение может привести к тому, что разработчики будут ошибочно думать, что изменения не приведут к поломке или что тесты не нужны. Итог: если вы хотите, чтобы что-то было «приватным», то оно не должно быть доступно извне.
 
@@ -1253,7 +1253,7 @@
     firstNames.set(this, 'Panda');
     ```
 
-- Не сохраняйте ссылку на `this`. Используйте стрелочные функции или [метод bind()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
+54) Не сохраняйте ссылку на `this`. Используйте стрелочные функции или [метод bind()](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Function/bind).
 
     ```javascript
     // плохо
@@ -1279,7 +1279,7 @@
       };
     }
     ```
-- Сокращения или буквенные аббревиатуры всегда должны быть в верхнем или нижнем регистре.
+55) Сокращения или буквенные аббревиатуры всегда должны быть в верхнем или нижнем регистре.
 
     > Почему? Имена предназначены для удобства чтения.
 
@@ -1314,7 +1314,7 @@
     ];
     ```
 
-- Если свойство/метод возвращает логический тип, то используйте названия `isVal()` или `hasVal()`.
+56) Если свойство/метод возвращает логический тип, то используйте названия `isVal()` или `hasVal()`.
 
     ```javascript
     // плохо
@@ -1328,7 +1328,7 @@
     }
     ```
 
-- Используйте `Number.isNaN` вместо глобального `isNaN`.
+57) Используйте `Number.isNaN` вместо глобального `isNaN`.
     eslint: [`no-restricted-globals`](https://eslint.org/docs/rules/no-restricted-globals)
 
     > Почему? Глобальная функция `isNaN` приводит не-числа к числам, возвращая `true` для всего, что приводится к `NaN`.
@@ -1344,7 +1344,7 @@
     Number.isNaN(Number('1.2.3')); // true
     ```
 
-- Используйте `Number.isFinite` вместо глобального `isFinite`.
+58) Используйте `Number.isFinite` вместо глобального `isFinite`.
     eslint: [`no-restricted-globals`](https://eslint.org/docs/rules/no-restricted-globals)
 
     > Почему? Глобальная функция `isFinite` приводит не-числа к числам, возвращая `true` для всего, что приводится к конечному числу.
