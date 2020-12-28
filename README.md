@@ -30,7 +30,7 @@
     }
     ```
 
-- Используйте сокращённую запись метода объекта. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
+3) Используйте сокращённую запись метода объекта. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
 
     ```javascript
     // плохо
@@ -52,7 +52,7 @@
     };
     ```
 
-- Используйте сокращённую запись свойств объекта. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
+4) Используйте сокращённую запись свойств объекта. eslint: [`object-shorthand`](https://eslint.org/docs/rules/object-shorthand.html)
 
     > Почему? Это короче и понятнее.
 
@@ -70,7 +70,7 @@
     };
     ```
 
-- Группируйте ваши сокращённые записи свойств в начале объявления объекта.
+5) Группируйте ваши сокращённые записи свойств в начале объявления объекта.
 
     > Почему? Так легче сказать, какие свойства используют сокращённую запись.
 
@@ -99,7 +99,7 @@
     };
     ```
 
-- Используйте оператор расширения вместо [`Object.assign`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) для поверхностного копирования объектов. Используйте синтаксис оставшихся свойств, чтобы получить новый объект с некоторыми опущенными свойствами.
+6) Используйте оператор расширения вместо [`Object.assign`](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) для поверхностного копирования объектов. Используйте синтаксис оставшихся свойств, чтобы получить новый объект с некоторыми опущенными свойствами.
 
     ```javascript
     // очень плохо
@@ -118,7 +118,7 @@
     const { a, ...noA } = copy; // noA => { b: 2, c: 3 }
     ```
 
-- Для создания массива используйте литеральную нотацию. eslint: [`no-array-constructor`](https://eslint.org/docs/rules/no-array-constructor.html)
+7) Для создания массива используйте литеральную нотацию. eslint: [`no-array-constructor`](https://eslint.org/docs/rules/no-array-constructor.html)
 
     ```javascript
     // плохо
@@ -128,7 +128,7 @@
     const items = [];
     ```
 
-- Для добавления элемента в массив используйте [Array#push](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/push) вместо прямого присваивания.
+8) Для добавления элемента в массив используйте [Array#push](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/push) вместо прямого присваивания.
 
     ```javascript
     const someStack = [];
@@ -140,7 +140,7 @@
     someStack.push('abracadabra');
     ```
 
-- Для копирования массивов используйте оператор расширения `...`.
+9) Для копирования массивов используйте оператор расширения `...`.
 
     ```javascript
     // плохо
@@ -156,7 +156,7 @@
     const itemsCopy = [...items];
     ```
 
-- Если массив располагается на нескольких строках, то используйте разрывы строк после открытия и перед закрытием скобок.
+10) Если массив располагается на нескольких строках, то используйте разрывы строк после открытия и перед закрытием скобок.
 
     ```javascript
     // плохо
@@ -192,7 +192,7 @@
     ];
     ```
 
-- При обращении к нескольким свойствам объекта используйте деструктуризацию объекта. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
+11) При обращении к нескольким свойствам объекта используйте деструктуризацию объекта. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
 
     > Почему? Деструктуризация избавляет вас от создания временных переменных для этих свойств.
 
@@ -217,7 +217,7 @@
     }
     ```
 
-- Используйте деструктуризацию массивов. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
+12) Используйте деструктуризацию массивов. eslint: [`prefer-destructuring`](https://eslint.org/docs/rules/prefer-destructuring)
 
     ```javascript
     const arr = [1, 2, 3, 4];
@@ -230,7 +230,7 @@
     const [first, second] = arr;
     ```
 
-- Используйте одинарные кавычки `''` для строк. eslint: [`quotes`](https://eslint.org/docs/rules/quotes.html)
+13) Используйте одинарные кавычки `''` для строк. eslint: [`quotes`](https://eslint.org/docs/rules/quotes.html)
 
     ```javascript
     // плохо
@@ -243,7 +243,7 @@
     const name = 'Capt. Janeway';
     ```
 
-- Строки, у которых в строчке содержится более 100 символов, не пишутся на нескольких строчках с использованием конкатенации.
+14) Строки, у которых в строчке содержится более 100 символов, не пишутся на нескольких строчках с использованием конкатенации.
 
     > Почему? Работать с разбитыми строками неудобно и это затрудняет поиск по коду.
 
@@ -263,7 +263,7 @@
     const errorMessage = 'This is a super long error that was thrown because of Batman. When you stop to think about how Batman had anything to do with this, you would get nowhere fast.';
     ```
 
-- При создании строки программным путём используйте шаблонные строки вместо конкатенации. eslint: [`prefer-template`](https://eslint.org/docs/rules/prefer-template.html) [`template-curly-spacing`](https://eslint.org/docs/rules/template-curly-spacing)
+15) При создании строки программным путём используйте шаблонные строки вместо конкатенации. eslint: [`prefer-template`](https://eslint.org/docs/rules/prefer-template.html) [`template-curly-spacing`](https://eslint.org/docs/rules/template-curly-spacing)
 
     > Почему? Шаблонные строки дают вам читабельность, лаконичный синтаксис с правильными символами перевода строк и функции интерполяции строки.
 
@@ -289,7 +289,7 @@
     }
     ```
 
-- Никогда не используйте `eval()`, т.к. это открывает множество уязвимостей. eslint: [`no-eval`](https://eslint.org/docs/rules/no-eval)
+16) Никогда не используйте `eval()`, т.к. это открывает множество уязвимостей. eslint: [`no-eval`](https://eslint.org/docs/rules/no-eval)
 
 - Не используйте в строках необязательные экранирующие символы. eslint: [`no-useless-escape`](https://eslint.org/docs/rules/no-useless-escape)
 
@@ -303,7 +303,7 @@
     const foo = '\'this\' is "quoted"';
     const foo = `my name is '${name}'`;
     ```
-- Используйте синтаксис записи аргументов по умолчанию, а не изменяйте аргументы функции.
+17) Используйте синтаксис записи аргументов по умолчанию, а не изменяйте аргументы функции.
 
     ```javascript
     // очень плохо
@@ -329,7 +329,7 @@
       // ...
     }
     ```
-- Отступы при определении функции. eslint: [`space-before-function-paren`](https://eslint.org/docs/rules/space-before-function-paren) [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks)
+18) Отступы при определении функции. eslint: [`space-before-function-paren`](https://eslint.org/docs/rules/space-before-function-paren) [`space-before-blocks`](https://eslint.org/docs/rules/space-before-blocks)
 
     > Почему? Однородность кода — это хорошо. Вам не надо будет добавлять или удалять пробел при манипуляции с именем.
 
