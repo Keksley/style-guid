@@ -278,11 +278,6 @@
       return ['How are you, ', name, '?'].join();
     }
 
-    // плохо
-    function sayHi(name) {
-      return `How are you, ${ name }?`;
-    }
-
     // хорошо
     function sayHi(name) {
       return `How are you, ${name}?`;
